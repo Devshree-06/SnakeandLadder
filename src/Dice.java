@@ -1,6 +1,6 @@
 
 public class Dice {
-    public int number(){
+    public static int roll(){
         return (int) (Math.random() * 6) + 1;
     }
 
