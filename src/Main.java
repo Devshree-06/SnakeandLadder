@@ -7,8 +7,16 @@ public class Main {
        Players player1=new Players("abc");
        SnakeLadderGame game=new SnakeLadderGame(player1);
         System.out.println("The first player is:"+player1.NamePlayer());
-        game.Turns();
-        game.selectOption();
+        while(player1.CurrentPosition()<100){
+            game.Turns();
+            game.selectOption();
+
+        }
+        if(player1.CurrentPosition()>100){
+            int reduce=player1.CurrentPosition()-100;
+            player1.StartCurrPos(100-reduce);
+        }
+        System.out.println("Position reached is 100");
 
 
     }
