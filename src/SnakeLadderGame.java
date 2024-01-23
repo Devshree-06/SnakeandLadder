@@ -8,6 +8,11 @@ public class SnakeLadderGame {
     public void Turns(){
 
         int dieval=Dice.roll();
+        System.out.println("The dice number is: "+dieval);
         int newPos= player.CurrentPosition()+dieval;
+        player.StartCurrPos(newPos);
+        System.out.println("The position of player is: "+player.CurrentPosition());
+
     }
+
 }
