@@ -14,5 +14,22 @@ public class SnakeLadderGame {
         System.out.println("The position of player is: "+player.CurrentPosition());
 
     }
+    public void selectOption(){
+        int option=(int)(Math.random()*3);
+        switch(option){
+            case 0:
+                System.out.println("Player cannot move ahead: No Play");
+                break;
+            case 1:
+                int ladder=Dice.roll();
+                player.StartCurrPos(player.CurrentPosition()+ladder);
+                System.out.println("Player moves ahead by :"+ladder+"steps");
+                break;
+            case 2:
+                int snake=Dice.roll();
+                player.StartCurrPos(player.CurrentPosition()-snake);
+                System.out.println("Player loses " +snake+ " steps");
+        }
+    }
 
 }

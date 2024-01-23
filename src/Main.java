@@ -8,6 +8,7 @@ public class Main {
        SnakeLadderGame game=new SnakeLadderGame(player1);
         System.out.println("The first player is:"+player1.NamePlayer());
         game.Turns();
+        game.selectOption();
 
 
     }
